@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                           
+                                                      
+                                     
+
+    
+
+                                           
+                                                
+                                                                          
+                                                                   
+
+                 
+                             
+                                                                                    
+
+                 
+                           
+                                          
+
+                 
+                               
+                                
+
+                 
+                                     
+                                 
+
+                 
+                               
+                                 
+
+                 
+                                     
+                                 
+
+                 
+                                   
+                                 
+
+                 
+                               
+                                 
+
+                 
+                               
+                                
+
+                 
+                            
+                                                                  
+
+                 
+                              
+                             
+
+                 
+                           
+                                 
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                                           
+            android:tag="layout/browser_item_0"  
+            android:id="@+id/browser_container"
+                                                                                                 
+            android:focusable="true"
+            android:nextFocusRight="@+id/item_ban"
+            android:foreground="?android:attr/selectableItemBackground"
+                                                                                                            
+            android:minHeight="48dp"
+                                                
+                                                          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:targetApi="jelly_bean">
+
+        <org.videolan.vlc.gui.helpers.ThreeStatesCheckbox
+                android:id="@+id/browser_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_1"                               
+                android:focusable="false"
+                                                            
+                android:visibility="gone"                                                                                           
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Image downloading is handled by org.videolan.vlc.gui.helpers.ImageLoader.loadImage() -->
+        <ImageView
+                android:id="@+id/item_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:importantForAccessibility="no"
+                android:tag="binding_2"                  
+                android:scaleType="centerCrop"
+                                      
+                                                                                                                      
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/browser_checkbox"
+                app:layout_constraintTop_toTopOf="parent"
+                                   
+                tools:srcCompat="@drawable/ic_am_folder" />
+
+        <TextView
+                android:id="@+id/dvi_icon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:tag="binding_3"   
+                android:textColor="@color/whitetransparent"
+                android:textSize="11sp"
+                android:visibility="gone"                                                                    
+                app:layout_constraintBottom_toBottomOf="@+id/item_icon"
+                app:layout_constraintEnd_toEndOf="@+id/item_icon"
+                app:layout_constraintStart_toStartOf="@+id/item_icon"
+                app:layout_constraintTop_toTopOf="@+id/item_icon" />
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="marquee"
+                android:tag="binding_4"       
+                android:lineSpacingMultiplier="1.1"
+                android:marqueeRepeatLimit="1"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                                                        
+                android:textColor="?attr/list_title"
+                android:textSize="16sp"
+                                           
+                app:layout_constraintBottom_toTopOf="@+id/text"
+                app:layout_constraintEnd_toStartOf="@+id/item_ban"
+                app:layout_constraintStart_toEndOf="@+id/item_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_goneMarginBottom="2dp"
+                tools:text="Folder" />
+
+        <TextView
+                android:id="@+id/text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:tag="binding_5"       
+                android:maxLines="1"
+                android:textColor="?attr/list_subtitle"
+                android:textSize="12sp"
+                android:visibility="gone"                                                                                                
+                                                                                                                                                            
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/item_ban"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:text="Empty"
+                tools:visibility="visible" />
+
+        <ImageView
+                android:id="@+id/item_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tag="binding_6"              
+                                                        
+                android:padding="8dp"
+                android:visibility="gone"                                                      
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="@string/more_actions"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_more"
+                tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/item_ban"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                android:padding="2dp"
+                android:alpha="0"
+                android:contentDescription="@string/more_actions"
+                android:tag="binding_7"                
+                android:nextFocusLeft="@+id/browser_container"
+                android:nextFocusRight="@+id/browser_container"
+                android:nextFocusUp="@+id/browser_container"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/item_more"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_ban"
+                tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

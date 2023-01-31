@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                      
+                                                            
+
+    
+
+                                           
+
+                                                
+
+                 
+                            
+                                                                          
+
+                 
+                                
+                                 
+
+                 
+                            
+                                 
+
+                 
+                           
+                                 
+
+                 
+                                
+                                 
+
+                 
+                                  
+                                 
+
+                 
+                               
+                                 
+
+                 
+                           
+                              
+
+                 
+                           
+                                
+
+                 
+                                 
+                                
+
+                 
+                          
+                             
+
+                 
+                               
+                             
+
+                 
+                              
+                             
+
+                 
+                            
+                                                                  
+
+                 
+                                
+                                                            
+
+                 
+                             
+                                                                                
+           
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                                  
+            android:background="?attr/video_card_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="8dp"
+            android:clipToPadding="false"
+            android:tag="layout/video_grid_card_0"
+                                                
+                                                          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" xmlns:vlc="http://schemas.android.com/apk/res-auto">
+
+        <com.google.android.material.card.MaterialCardView
+                android:id="@+id/container"
+                style="@style/VLCCardView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:focusable="true"
+                        android:importantForAccessibility="no"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:longClickable="true"
+                android:tag="binding_1"             
+                                                            
+                vlc:layout_constraintDimensionRatio="16:10"
+                vlc:layout_constraintEnd_toEndOf="parent"
+                vlc:layout_constraintStart_toStartOf="parent"
+                vlc:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:id="@+id/ml_item_thumbnail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                                              
+                        tools:src="@tools:sample/backgrounds/scenic"
+                        vlc:layout_constraintEnd_toEndOf="parent"
+                        vlc:layout_constraintStart_toStartOf="parent"
+                        vlc:layout_constraintTop_toTopOf="parent"
+                                              android:tag="binding_2"/>
+                <View
+                        android:id="@+id/network_off_overlay"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:tag="binding_3"                                                           
+                        android:background="?attr/disabled_overlay_color"
+                        vlc:layout_constraintBottom_toBottomOf="@+id/ml_item_thumbnail"
+                        vlc:layout_constraintEnd_toEndOf="@+id/ml_item_thumbnail"
+                        vlc:layout_constraintStart_toStartOf="@+id/ml_item_thumbnail"
+                        vlc:layout_constraintTop_toTopOf="@+id/ml_item_thumbnail" />
+
+                <ImageView
+                        android:id="@+id/ml_item_overlay"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/video_overlay_gradient"
+                        vlc:layout_constraintBottom_toBottomOf="@+id/ml_item_thumbnail"
+                        vlc:layout_constraintEnd_toEndOf="@+id/ml_item_thumbnail"
+                        vlc:layout_constraintHorizontal_bias="0.0"
+                        vlc:layout_constraintStart_toStartOf="@+id/ml_item_thumbnail"
+                        vlc:layout_constraintTop_toTopOf="@+id/ml_item_thumbnail"
+                        vlc:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                        android:id="@+id/ml_item_resolution"
+                        style="@style/VLC.TextViewDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/rounded_corners_black_more_transparent"
+                        android:paddingStart="4dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="4dp"
+                        android:paddingBottom="2dp"
+                        android:tag="binding_4"     
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:visibility="gone"                                                                     
+                        tools:text="HD"
+                        tools:visibility="visible"
+                        vlc:layout_constraintStart_toStartOf="parent"
+                        vlc:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                        android:id="@+id/network_media"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/rounded_corners_black_more_transparent"
+                        android:padding="3dp"
+                        android:tag="binding_5"                                                          
+                        vlc:layout_constraintBottom_toTopOf="@+id/ml_item_progress"
+                        vlc:layout_constraintStart_toStartOf="@+id/ml_item_thumbnail"
+                        vlc:layout_goneMarginBottom="4dp"
+                        vlc:srcCompat="@drawable/ic_emoji_network" />
+
+
+                <ImageView
+                        android:id="@+id/otg_media"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/rounded_corners_black_more_transparent"
+                        android:padding="3dp"
+                        android:tag="binding_6"                                                      
+                        vlc:layout_constraintBottom_toTopOf="@+id/ml_item_progress"
+                        vlc:layout_constraintStart_toStartOf="@+id/ml_item_thumbnail"
+                        vlc:layout_goneMarginBottom="4dp"
+                        vlc:srcCompat="@drawable/ic_emoji_otg" />
+
+                <ImageView
+                        android:id="@+id/sd_media"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/rounded_corners_black_more_transparent"
+                        android:padding="3dp"
+                        android:tag="binding_7"                                                     
+                        vlc:layout_constraintBottom_toTopOf="@+id/ml_item_progress"
+                        vlc:layout_constraintStart_toStartOf="@+id/ml_item_thumbnail"
+                        vlc:layout_goneMarginBottom="4dp"
+                        vlc:srcCompat="@drawable/ic_emoji_sd" />
+
+                <ImageView
+                        android:id="@+id/absent_media"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/rounded_corners_black_more_transparent"
+                        android:padding="3dp"
+                        android:tag="binding_8"                                      
+                        vlc:layout_constraintBottom_toTopOf="@+id/ml_item_progress"
+                        vlc:layout_constraintStart_toStartOf="@+id/ml_item_thumbnail"
+                        vlc:layout_goneMarginBottom="4dp"
+                        vlc:srcCompat="@drawable/ic_emoji_absent" />
+
+                <ImageView
+                        android:id="@+id/ml_item_seen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/rounded_corners_black_more_transparent"
+                        android:padding="3dp"
+                        android:visibility="gone"                                                  
+                        tools:visibility="visible"
+                        vlc:layout_constraintStart_toEndOf="@+id/ml_item_resolution"
+                        vlc:layout_constraintTop_toTopOf="parent"
+                        vlc:layout_goneMarginStart="4dp"
+                        vlc:srcCompat="@drawable/ic_check"  android:tag="binding_9"/>
+
+                <ImageView
+                        android:id="@+id/item_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/more_actions"
+                        android:tag="binding_10"                
+                        android:scaleType="fitEnd"
+                        android:importantForAccessibility="yes"
+                                                                                                            
+                        vlc:layout_constraintEnd_toEndOf="parent"
+                        vlc:layout_constraintTop_toTopOf="parent"
+                        vlc:srcCompat="@drawable/ic_more_w" />
+
+                <ImageView
+                        android:id="@+id/selected_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:tag="binding_11"                                   
+                        vlc:layout_constraintEnd_toEndOf="parent"
+                        vlc:layout_constraintTop_toTopOf="@+id/ml_item_thumbnail"
+                        vlc:srcCompat="@drawable/ic_video_grid_check" />
+
+                <ProgressBar
+                        android:id="@+id/ml_item_progress"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:focusable="false"
+                        android:indeterminate="false"
+                                            
+                        android:maxHeight="4dip"
+                        android:minHeight="4dip"
+                        android:tag="binding_12"      
+                        android:progressDrawable="@drawable/gridview_progressbar"
+                        android:secondaryProgress="0"
+                                                                                        
+                        vlc:layout_constraintBottom_toBottomOf="parent"
+                        vlc:layout_constraintEnd_toEndOf="parent"
+                        vlc:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Image loading is handled by org.videolan.vlc.gui.helpers.ImageLoader.loadImage() -->
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+                android:id="@+id/ml_item_title"
+                style="@style/VLC.TextViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1"
+                android:maxLines="1"
+                android:tag="binding_13"     
+                android:textSize="16sp"
+                tools:targetApi="jelly_bean"
+                tools:text="Star wars Episode 1"
+                                              
+                vlc:layout_constraintEnd_toEndOf="@+id/container"
+                vlc:layout_constraintStart_toStartOf="parent"
+                vlc:layout_constraintTop_toBottomOf="@+id/container" />
+
+        <TextView
+                android:id="@+id/ml_item_time"
+                style="@style/VLC.TextViewDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:tag="binding_14"         
+                                              
+                android:textSize="12sp"
+                                                                                          
+                tools:text="32:55"
+                vlc:layout_constraintBottom_toBottomOf="parent"
+                vlc:layout_constraintStart_toStartOf="parent"
+                vlc:layout_constraintTop_toBottomOf="@+id/ml_item_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         
